@@ -1,7 +1,7 @@
 # List of authors for fishtest, as of February 23, 2025
 
 Gary Linscott (glinscott)
-
+Jackson Zhu
 Andy Pilate (Cubox)
 Bojun Guo (noobpwnftw)
 Chess13234
@@ -60,8 +60,8 @@ Viren (Viren6)
 Werner Fenchel (wfenchel)
 
 Special thanks:
-Ilari Pihlajisto - [cutechess](https://github.com/cutechess/cutechess), which has played over 8.5 billion games
-Max Allendorf - [fastchess](https://github.com/Disservin/fastchess), which drives all the games
+Ilari Pihlajisto - [cutechess](https://github.com/GlowingJellyfish/cutechess), which has played over 8.5 billion games
+Max Allendorf - [fastchess](https://github.com/GlowingJellyfish/fastchess), which drives all the games
 Tord Romstad - for Glaurung
 Dariusz Orzechowski - for the opening book concept (perft generation + position score filtering)
 Stefan Pohl - for the Unbalanced Human Openings books
