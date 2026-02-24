@@ -1,0 +1,473 @@
+/* A custom dark color theme for overriding bootstrap css rules */
+
+:root {
+  color-scheme: dark;
+  --bg-dark-1: #111;
+  --bg-dark-2: #222;
+  --bg-dark-3: #333;
+  --bg-dark-4: #444;
+  --bg-dark-5: #555;
+  --color-dark-1: #b1ada7;
+  --color-dark-2: #9b9b9b;
+
+  --bs-body-color: var(--color-dark-1);
+  --bs-body-color-rgb: 17, 17, 17;
+
+  --bs-body-bg: var(--bg-dark-1);
+  --bs-body-bg-rgb: 177, 173, 167;
+
+  --bs-link-color-rgb: 117, 187, 118;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #414141;
+  border-color: var(--bg-dark-1);
+}
+
+.main::-webkit-scrollbar-thumb {
+  border-color: var(--bg-dark-1);
+}
+
+.main::-webkit-scrollbar-track {
+  background-color: var(--bg-dark-1);
+}
+
+.sticky-top {
+  background: var(--bg-dark-1);
+}
+
+pre .hljs {
+  color: #c9d1d9;
+  background: var(--bg-dark-2);
+}
+
+pre .hljs-comment,
+.hljs-quote {
+  color: #8b949e;
+}
+
+pre .hljs-deletion {
+  background: #f851494d;
+}
+
+pre .hljs-addition {
+  background: #3fb9504d;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border: 4px solid var(--bg-dark-2);
+}
+
+legend {
+  color: var(--color-dark-1);
+}
+
+/* Top navbar */
+header.navbar {
+  background-color: var(--bg-dark-2);
+}
+
+.navbar {
+  --bs-navbar-brand-color: var(--color-dark-1);
+  --bs-navbar-brand-hover-color: var(--color-dark-2);
+  --bs-navbar-color: var(--color-dark-1);
+  --bs-navbar-hover-color: var(--color-dark-2);
+}
+
+.navbar-nav {
+  --bs-nav-link-color: var(--color-dark-1);
+  --bs-nav-link-hover-color: var(--color-dark-2);
+}
+
+/* Left-side main navigation sidebar */
+.mainnavbar {
+  background-color: var(--bg-dark-2);
+}
+
+.mainnavbar::-webkit-scrollbar-thumb {
+  border-color: var(--bg-dark-2);
+}
+
+.mainnavbar::-webkit-scrollbar-track {
+  background-color: var(--bg-dark-2);
+}
+
+.links-heading {
+  color: var(--color-dark-1);
+}
+
+.links-group .links-link {
+  color: var(--color-dark-1);
+}
+
+.links-group .links-link:hover {
+  color: #e7e7e7;
+  background: var(--bg-dark-3);
+}
+
+.offcanvas-lg {
+  --bs-offcanvas-bg: var(--bg-dark-2);
+  --bs-border-color: var(--bg-dark-3);
+}
+
+.btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Forms */
+.form-control,
+.form-control:focus,
+.form-control::file-selector-button,
+.form-select,
+.input-group-text,
+.form-check-input {
+  background-color: var(--bg-dark-3);
+  color: var(--color-dark-1);
+  border-color: var(--bg-dark-5);
+}
+
+.form-floating > .form-control ~ label,
+.form-floating > .form-select ~ label {
+  color: var(--color-dark-1);
+}
+
+.form-control[readonly] {
+  background: var(--bg-dark-5);
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239b9b9b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: var(--bg-dark-4);
+}
+
+option.grayedoutoption {
+  background-color: var(--bg-dark-5);
+}
+
+/* Button groups */
+.btn {
+  text-shadow: none;
+  filter: contrast(0.6);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-group > .btn:not(.btn-info) {
+  background: #2f2f2f;
+  border-color: var(--bg-dark-3);
+  color: var(--bs-white);
+}
+
+.btn-light {
+  color: var(--bs-white);
+  background-color: #212529;
+  border-color: #212529 !important;
+}
+
+.btn-light:hover {
+  color: var(--bs-white);
+  background-color: #1c1f23;
+  border-color: #1a1e21 !important;
+}
+
+.btn-light:focus {
+  color: var(--bs-white);
+  background-color: #1c1f23;
+  border-color: #1a1e21 !important;
+  box-shadow: 0 0 0 0.25rem rgb(66 70 73 / 50%);
+}
+
+/* Pagination links */
+.pagination {
+  --bs-pagination-bg: var(--bg-dark-1);
+  --bs-pagination-border-color: var(--bg-dark-3);
+
+  --bs-pagination-hover-bg: var(--bg-dark-4);
+  --bs-pagination-hover-border-color: var(--bs-pagination-border-color);
+
+  --bs-pagination-focus-bg: var(--bs-pagination-hover-bg);
+
+  --bs-pagination-disabled-color: var(--bs-gray-700);
+  --bs-pagination-disabled-bg: var(--bg-dark-1);
+  --bs-pagination-disabled-border-color: var(--bs-pagination-border-color);
+}
+
+/* Tables */
+.table {
+  color: var(--color-dark-1);
+}
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: var(--bg-dark-2);
+  color: var(--color-dark-1);
+}
+
+.table th,
+.table td {
+  color: var(--color-dark-1);
+}
+
+.table th {
+  border-bottom-color: var(--bg-dark-4) !important;
+}
+
+tbody,
+tfoot,
+th,
+thead,
+tr {
+  border-color: var(--bg-dark-4);
+}
+
+div#machines thead,
+div#tasks thead {
+  background-color: var(--bg-dark-1);
+}
+
+@media (max-width: 575.98px) {
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--bg-dark-2);
+  }
+}
+
+/* Background colors for running tasks on test run pages */
+.table tbody tr.info > td {
+  background-color: #0f3373;
+}
+
+/* Background colors for a highlighted task */
+.table tbody tr.highlight > td {
+  background-color: #800080;
+}
+
+/* Override - test tasks table - purged tasks red background */
+td[style*="background-color:#ffebeb"] {
+  background: #5f1c1c !important;
+}
+
+/* Override - test tasks table - residuals green */
+td[style*="background-color:#44EB44"] {
+  background: #108e10 !important;
+}
+
+/* Override - test tasks table - residuals yellow */
+td[style*="background-color:yellow"] {
+  background: #828a04 !important;
+}
+
+/* Override - test tasks table - residuals red */
+td[style*="background-color:#FF6A6A"] {
+  background: #d65252 !important;
+}
+
+/* Override - "green" description text in /nns page */
+.default-net {
+  color: var(--bg-dark-1);
+}
+
+/* Darken white box */
+pre[class*="results-pre"] {
+  background: var(--bg-dark-3) !important;
+  color: var(--color-dark-1) !important;
+}
+
+/* Darker yellow */
+pre[style*="background-color: yellow"] {
+  background: #efef22cc !important;
+  color: var(--bg-dark-3) !important;
+}
+
+/* Darker red */
+pre[style*="background-color: #FF6A6A"] {
+  background: #ed6464cc !important;
+  color: var(--bg-dark-3) !important;
+}
+
+/* Darker green */
+pre[style*="background-color: #44EB44"] {
+  background: #75bb76 !important;
+  color: var(--bg-dark-3) !important;
+}
+
+/* Darker blue */
+pre[style*="background-color: #66CCFF"] {
+  background: #88d7ffcc !important;
+  color: var(--bg-dark-3) !important;
+}
+
+.ltc-highlight {
+  color: var(--bs-link-color) !important;
+}
+
+/* Darken pink border */
+pre[class*="time-odds"] {
+  border-color: #ffffffcc !important;
+}
+
+/* Gauges */
+/* Outer-ring */
+#LLR_chart_div circle:nth-child(1),
+#LOS_chart_div circle:nth-child(1),
+#ELO_chart_div circle:nth-child(1) {
+  fill: var(--bg-dark-5);
+  stroke: var(--color-dark-1);
+}
+/* Main background */
+#LLR_chart_div circle:nth-child(2),
+#LOS_chart_div circle:nth-child(2),
+#ELO_chart_div circle:nth-child(2) {
+  fill: var(--bg-dark-1);
+  stroke: var(--bg-dark-3);
+}
+/* Main text */
+#LLR_chart_div text,
+#LOS_chart_div text,
+#ELO_chart_div text {
+  fill: var(--color-dark-1);
+}
+/* Current value text */
+#LLR_chart_div text:nth-child(1),
+#LOS_chart_div text:nth-child(1),
+#ELO_chart_div text:nth-child(1) {
+  fill: var(--color-dark-1);
+}
+/* Ticks */
+#LLR_chart_div path,
+#LOS_chart_div path,
+#ELO_chart_div path {
+  stroke: var(--color-dark-1);
+}
+/* Hand */
+#LLR_chart_div path:nth-child(2),
+#LOS_chart_div path:nth-child(2),
+#ELO_chart_div path:nth-child(2) {
+  fill: orange;
+  stroke: orange;
+}
+/* Circle of the hand */
+#LLR_chart_div circle:nth-child(3),
+#LOS_chart_div circle:nth-child(3),
+#ELO_chart_div circle:nth-child(3) {
+  fill: #355eae;
+}
+/* Good area */
+#LLR_chart_div path:nth-child(3),
+#LOS_chart_div path:nth-child(3),
+#ELO_chart_div path:nth-child(3) {
+  fill: #005500;
+}
+/* Neutral area */
+#LLR_chart_div path:nth-child(4),
+#LOS_chart_div path:nth-child(4),
+#ELO_chart_div path:nth-child(4) {
+  fill: #9f3e18;
+}
+/* Bad area */
+#LLR_chart_div path:nth-child(5),
+#LOS_chart_div path:nth-child(5),
+#ELO_chart_div path:nth-child(5) {
+  fill: #880000;
+}
+
+/* Cards */
+.card {
+  --bs-card-bg: var(--bg-dark-2);
+}
+
+/* Alerts */
+.alert-primary {
+  --bs-alert-color: rgb(114, 190, 255);
+  --bs-alert-bg: rgba(var(--bs-primary-rgb), 0.271);
+  --bs-alert-border-color: rgba(var(--bs-primary-rgb), 0.5);
+}
+.alert-primary .alert-link {
+  color: rgb(134, 200, 255);
+}
+
+.alert-secondary {
+  --bs-alert-bg: rgba(var(--bs-secondary-rgb), 0.271);
+  --bs-alert-border-color: rgba(var(--bs-secondary-rgb), 0.5);
+}
+
+.alert-success {
+  --bs-alert-bg: rgba(var(--bs-link-color-rgb), 0.271);
+  --bs-alert-border-color: rgba(var(--bs-link-color-rgb), 0.5);
+}
+
+.alert-danger {
+  --bs-alert-bg: rgba(var(--bs-danger-rgb), 0.271);
+  --bs-alert-border-color: rgba(var(--bs-danger-rgb), 0.5);
+}
+
+.alert-warning {
+  --bs-alert-bg: rgba(var(--bs-warning-rgb), 0.271);
+  --bs-alert-border-color: rgba(var(--bs-warning-rgb), 0.5);
+}
+
+.alert-info {
+  --bs-alert-bg: rgba(var(--bs-info-rgb), 0.271);
+  --bs-alert-border-color: rgba(var(--bs-info-rgb), 0.5);
+}
+
+.alert-light {
+  --bs-alert-color: rgba(var(--bs-black-rgb), 0.75);
+  --bs-alert-bg: rgb(195, 195, 195);
+  --bs-alert-border-color: rgba(var(--bs-white-rgb), 0.5);
+}
+.alert-light .alert-link {
+  color: rgba(var(--bs-black-rgb), 0.75);
+}
+
+.alert-dark {
+  --bs-alert-bg: var(--bg-dark-2);
+  --bs-alert-border-color: var(--bg-dark-3);
+}
+
+.alert-secondary,
+.alert-success,
+.alert-danger,
+.alert-warning,
+.alert-info,
+.alert-dark {
+  --bs-alert-color: rgb(214, 209, 203);
+}
+
+.alert-secondary .alert-link,
+.alert-success .alert-link,
+.alert-danger .alert-link,
+.alert-warning .alert-link,
+.alert-info .alert-link,
+.alert-dark .alert-link {
+  color: rgb(214, 209, 203);
+}
+
+/* Green buttons in test run */
+.list-group {
+  --bs-list-group-color: var(--bs-body-color);
+  --bs-list-group-bg: var(--bs-body-bg);
+  --bs-list-group-border-color: rgba(255, 255, 255, 0.125);
+}
+
+/* Modals */
+.modal {
+  --bs-modal-bg: var(--bg-dark-2);
+  --bs-modal-border-color: var(--bg-dark-3);
+  --bs-modal-footer-border-color: var(--bs-modal-border-color);
+  --bs-modal-header-border-color: var(--bs-modal-border-color);
+}
+
+/* remove transparency of background */
+.alert-success.alert-success-non-transparent {
+  --bs-alert-bg: rgba(32, 51, 32, 1);
+}
+
+/* remove transparency of background */
+.alert-danger.alert-danger-non-transparent {
+  --bs-alert-bg: rgba(108, 20, 29, 1);
+}

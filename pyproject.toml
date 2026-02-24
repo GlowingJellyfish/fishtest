@@ -1,0 +1,20 @@
+[project]
+name = "fishtest"
+version = "0.1.0"
+description = "fishtest framework"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+    "ruff>=0.15.0",
+]
+
+[tool.ruff]
+extend-exclude = ["worker/packages"]
+
+[tool.ruff.lint]
+# Sort imports (isort rules).
+extend-select = ["I"]

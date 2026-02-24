@@ -1,0 +1,77 @@
+name: CI lint
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.14"]
+        node-version: ["25.x"]
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Ruff lint
+        uses: astral-sh/ruff-action@v3
+        id: ruff-lint
+        continue-on-error: true
+        with:
+          args: "check"
+
+      - name: Ruff lint statistics
+        uses: astral-sh/ruff-action@v3
+        id: ruff-lint-statistics
+        continue-on-error: true
+        with:
+          args: "check --output-format full --statistics"
+
+      - name: Ruff sort
+        uses: astral-sh/ruff-action@v3
+        id: ruff-sort
+        continue-on-error: true
+        with:
+          args: "check --select I"
+
+      - name: Ruff format
+        uses: astral-sh/ruff-action@v3
+        id: ruff-format
+        continue-on-error: true
+        with:
+          args: "format --check"
+
+      - name: Prettier format
+        id: prettier-format
+        continue-on-error: true
+        run: |
+          npx prettier --check "server/fishtest/static/{css/*.css,html/*.html,js/*.js}"
+
+      - name: Check linters and formatters status
+        run: |
+          if [[ "${{ steps.ruff-lint.outcome }}" == "success" ]]; then echo "✔️ lint"; else echo "❌ lint"; fi
+          if [[ "${{ steps.ruff-sort.outcome }}" == "success" ]]; then echo "✔️ sort"; else echo "❌ sort"; fi
+          if [[ "${{ steps.ruff-format.outcome }}" == "success" ]]; then echo "✔️ format"; else echo "❌ format"; fi
+          if [[ "${{ steps.prettier-format.outcome }}" == "success" ]]; then echo "✔️ prettier"; else echo "❌ prettier"; fi
+          if [[ "${{ steps.ruff-sort.outcome }}" == "failure" || "${{ steps.ruff-format.outcome }}" == "failure" || "${{ steps.prettier-format.outcome }}" == "failure" ]]; then exit 1; fi
+
+      - name: Print formatting instructions
+        if: ${{ failure() }}
+        run: |
+          echo "Run the following commands to format the code:"
+          echo "uv run ruff check --fix"
+          echo "uv run ruff format"
+          echo "npx prettier --write 'server/fishtest/static/{css/*.css,html/*.html,js/*.js}'"

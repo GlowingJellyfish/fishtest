@@ -1,15 +1,68 @@
-==================================
- AUTHORS (in chronological order)
-==================================
+# List of authors for fishtest, as of February 23, 2025
 
-Gary Linscott
-Marco Costalba
-Lucas Braesch
-Joona Kiiski
-Jean-Francois Romang
-Dariusz Orzechowski
+Gary Linscott (glinscott)
 
-Thanks to:
-Ilari Pihlajisto - cutechess, which drives all the games!
-Tord Romstad
-http://flag-sprites.com/ - For the great flag sprites
+Andy Pilate (Cubox)
+Bojun Guo (noobpwnftw)
+Chess13234
+chuckstables
+David (dav1312)
+David Zar
+Dubslow
+Fabian Fichter (ianfab)
+Fanael Linithien (Fanael)
+Fauzi Akram Dabat (FauziAkram)
+FieryDragonLord
+Gabe (MrBrain295)
+Gahtan Nahdi (gahtan-syarif)
+Giacomo Lorenzetti (G-Lorenz)
+Gian-Carlo Pascutto (gcp)
+Henri Wiechers (hwiechers)
+Jamie Whiting (jw1912)
+Jan Ondruš (hxim)
+Jean-Francois Romang (jromang)
+Jonathan Buladas Dumale (SFisGOD)
+Joona Kiiski (joona)
+Joost VandeVondele (vondele)
+Julian Willemer (NightlyKing)
+Jörg Oster (joergoster)
+Kamyar Kaviani
+LightningThunder1
+Linmiao Xu (linrock)
+Lucas Braesch (lucasart)
+Malcolm Campbell (xoto10)
+Marco Costalba (mcostalba)
+Max Allendorf (Disservin)
+Maxim Masiutin (maximmasiutin)
+Michael An (man)
+Michael Stembera (mstembera)
+Michał Robaczyk
+Michel Van den Bergh (vdbergh)
+Noé Costa
+Onur Zungur (zungur)
+Pasquale Pigazzini (ppigazzini)
+Raimund Heid (RaimundHeid)
+Robert Nürnberg (robertnurnberg)
+Ronald de Man (syzygy1)
+Sebastian Buchwald (UniQP)
+sf-x
+Shahin M. Shahin (peregrineshahin)
+Shawn Xu (xu-shawn)
+Siad Daboul (TopoIogist)
+Stefano Cardanobile (Stefano80)
+Stéphane Nicolet (snicolet)
+Syine Mineta (MinetaS)
+theo77186
+Tom Vijlbrief (tomtor)
+Unai Corzo (unaiic)
+Vince Negri (cuddlestmonkey)
+Viren (Viren6)
+Werner Fenchel (wfenchel)
+
+Special thanks:
+Ilari Pihlajisto - [cutechess](https://github.com/cutechess/cutechess), which has played over 8.5 billion games
+Max Allendorf - [fastchess](https://github.com/Disservin/fastchess), which drives all the games
+Tord Romstad - for Glaurung
+Dariusz Orzechowski - for the opening book concept (perft generation + position score filtering)
+Stefan Pohl - for the Unbalanced Human Openings books
+[Country Flag Sprites](https://flag-sprites.com) - for the great flag sprites
