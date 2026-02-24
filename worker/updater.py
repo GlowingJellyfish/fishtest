@@ -10,7 +10,7 @@ from games import requests_get, trim_files
 
 start_dir = Path().cwd()
 
-WORKER_URL = "https://github.com/official-stockfish/fishtest/archive/master.zip"
+WORKER_URL = "https://github.com/glowingjellyfish/fishtest/archive/master.zip"
 
 
 def do_restart():
