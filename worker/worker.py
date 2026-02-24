@@ -120,7 +120,7 @@ Apis used by the worker
 
 <fishtest>     = https://tests.stockfishchess.org
 <github>       = https://api.github.com
-<github-books> = <github>/repos/official-stockfish/books
+<github-books> = <github>/repos/glowingjellyfish/books
 
 Heartbeat           <fishtest>/api/beat                                         POST
 
@@ -130,7 +130,7 @@ Setup task          <github>/rate_limit                                         
                     <fishtest>/api/nn/<nnue>                                    GET
                     <github-books>/git/trees/master                             GET
                     <github-books>/git/trees/master/blobs/<sha-book>            GET
-                    <github>/repos/Disservin/fastchess/zipball/<sha>            GET
+                    <github>/repos/glowingjellyfish/fastchess/zipball/<sha>     GET
                     <github>/repos/<user-repo>/zipball/<sha>                    GET
 
 Main loop           <fishtest>/api/update_task                                  POST
@@ -443,7 +443,7 @@ def setup_fastchess(worker_dir, compiler, concurrency, global_cache, tests=False
 
         if blob is None:
             item_url = (
-                "https://api.github.com/repos/Disservin/fastchess/zipball/"
+                "https://api.github.com/repos/glowingjellyfish/fastchess/zipball/"
                 + FASTCHESS_SHA
             )
             print(f"Downloading {item_url}.")
@@ -1174,8 +1174,8 @@ def get_worker_arch(worker_dir):
     try:
         blob = download_from_github(
             item="scripts/get_native_properties.sh",
-            owner="official-stockfish",
-            repo="Stockfish",
+            owner="glowingjellyfish",
+            repo="glowingjellyfish",
             branch="master",
         )
         with open("get_native_properties.sh", "w") as f:
